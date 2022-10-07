@@ -12,7 +12,7 @@ services:
     depends_on:
       - postgres
     env_file:
-      - .env
+      - stack.env
   frontend:
     build: ./asistencia-frontend
     ports:
@@ -20,7 +20,7 @@ services:
     depends_on:
       - backend
     env_file:
-      - .env
+      - stack.env
   postgres:
     image: postgres:alpine
     volumes:
@@ -29,6 +29,6 @@ services:
     ports:
       - "6000:5432"
     env_file:
-      - .env
+      - stack.env
 volumes:
   postgres:
