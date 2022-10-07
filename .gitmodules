@@ -1,0 +1,6 @@
+[submodule "asistencia-backend"]
+	path = asistencia-backend
+	url = https://github.com/edarbieto/asistencia-backend
+[submodule "asistencia-frontend"]
+	path = asistencia-frontend
+	url = https://github.com/edarbieto/asistencia-frontend
