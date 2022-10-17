@@ -13,6 +13,7 @@ services:
       - postgres
     env_file:
       - stack.env
+    restart: unless-stopped 
   frontend:
     build: ./asistencia-frontend
     ports:
@@ -21,6 +22,7 @@ services:
       - backend
     env_file:
       - stack.env
+    restart: unless-stopped
   postgres:
     image: postgres:alpine
     volumes:
@@ -30,5 +32,6 @@ services:
       - "6000:5432"
     env_file:
       - stack.env
+    restart: unless-stopped
 volumes:
   postgres:
